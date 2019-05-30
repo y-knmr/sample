@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="#{pageContext.request.contextPath}/resources/layout/base.xhtml">
+	<ui:define name="headIncludes">
+		<h:outputStylesheet library="css" name="login.css"></h:outputStylesheet>
+	</ui:define>
+	<ui:define name="bodyIncludes">
+
+		<form jsf:id="form" class="form-signin">
+			<div class="text-center">
+				<h2 class="form-signin-heading my-2">menu</h2>
+			</div>
+
+			
+		</form>
+
+	</ui:define>
+</ui:composition>
