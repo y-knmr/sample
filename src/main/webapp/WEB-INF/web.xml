@@ -28,7 +28,7 @@
 	</context-param>
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
-		<param-value>none</param-value>
+		<param-value>luna-green</param-value>
 	</context-param>
 
 	<welcome-file-list>
