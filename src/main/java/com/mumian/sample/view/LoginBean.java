@@ -17,6 +17,8 @@ public class LoginBean {
 	@PostConstruct
 	public void init() {
 		System.out.println("called LoginBean#init");
+		user.setUserName("");
+		user.setPassword("");
 	}
 	
 	public String login() {

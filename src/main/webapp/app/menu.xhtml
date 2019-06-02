@@ -8,18 +8,36 @@
 	template="#{pageContext.request.contextPath}/resources/layout/base.xhtml">
 	<ui:define name="headIncludes">
 		<h:outputStylesheet library="css" name="login.css"></h:outputStylesheet>
-		<h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
-		<h:outputStylesheet name="primefaces-luna-green/theme.css" library="primefaces"/>
+		<!--<h:outputStylesheet name="primeicons/primeicons.css"
+			library="primefaces" /> -->
+		<h:outputStylesheet
+			name="primefaces/resources/primefaces-luna-green/theme.css"
+			library="primefaces" />
 	</ui:define>
 	<ui:define name="bodyIncludes">
 
-		<form jsf:id="form" class="form-signin">
+		<h:form id="form" class="form-signin">
 			<div class="text-center">
-				<h2 class="form-signin-heading my-2">menu</h2>
+				<h2 class="form-signin-heading my-2">Todo</h2>
 			</div>
 
-			
-		</form>
+			<h:panelGrid columns="3" style="margin:10px 0">
+				<p:outputLabel for="template" value="Content:"
+					style="font-weight:bold" />
+				<p:inputText id="template" size="50" value="#{menuBean.content}"/>
+				<p:commandButton value="Add" action="#{menuBean.add}" />
+			</h:panelGrid>
+
+			<p:dataTable id="todos" var="todo" value="#{menuBean.dispTodos}">
+				<p:column headerText="Id">
+					<h:outputText value="#{todo.no}" />
+				</p:column>
+				<p:column headerText="Content">
+					<h:outputText value="#{todo.content}" />
+				</p:column>
+			</p:dataTable>
+
+		</h:form>
 
 	</ui:define>
 </ui:composition>

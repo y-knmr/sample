@@ -29,9 +29,14 @@
 		<ui:insert name="headIncludes"></ui:insert>
 	</h:head>
 	<h:body>
+		<ui:include
+			src="#{pageContext.request.contextPath}/resources/layout/header.xhtml" />
 		<main role="main" class="container"> <ui:include
-			src="#{pageContext.request.contextPath}/resources/layout/alert.xhtml" /> <ui:insert name="wrapper" /> </main>
-		<ui:include src="#{pageContext.request.contextPath}/resources/layout/footer.xhtml" />
+			src="#{pageContext.request.contextPath}/resources/layout/alert.xhtml" />
+		<ui:insert name="wrapper" /> </main>
+
+		<ui:include
+			src="#{pageContext.request.contextPath}/resources/layout/footer.xhtml" />
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
