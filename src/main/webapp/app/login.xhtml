@@ -13,7 +13,7 @@
 	</ui:define>
 	<ui:define name="wrapper">
 
-		<form jsf:id="form" class="form-signin">
+		<h:form id="loginForm" class="form-signin"  prependId="false">
 			<div class="text-center">
 				<h2 class="form-signin-heading my-2">sample</h2>
 				<h:graphicImage library="images" name="mb.png" />
@@ -21,13 +21,13 @@
 
 			<div>
 				<!-- <label p:for="username" class="sr-only">Username</label> -->
-				<p:inputText class="form-control" placeholder="username" value="#{userInfo.userName}"/>
+				<p:inputText id="userName" class="form-control"  placeholder="username"  value="#{userInfo.userName}"/>
 				<!-- <label p:for="password" class="sr-only">Password</label>  -->
-				<p:password class="form-control" placeholder="password" value="#{userInfo.password}"/>
+				<p:password id="password"  class="form-control"  placeholder="password"  value="#{userInfo.password}" />
 			</div>
 			
-			<p:commandButton class="btn btn-lg btn-primary btn-block" id="login" value="Login" action="#{loginBean.login}"/>
-		</form>
+			<p:commandButton id="login"  class="btn btn-lg btn-primary btn-block"  value="Login" action="#{loginBean.login}"/>
+		</h:form>
 
 	</ui:define>
 </ui:composition>
